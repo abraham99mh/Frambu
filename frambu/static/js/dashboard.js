@@ -1,9 +1,9 @@
-(function($) {
+(function ($) {
   'use strict';
-  $(function() {
+  $(function () {
 
     Chart.defaults.global.legend.labels.usePointStyle = true;
-    
+
     if ($("#serviceSaleProgress").length) {
       var bar = new ProgressBar.Circle(serviceSaleProgress, {
         color: 'url(#gradient)',
@@ -54,72 +54,72 @@
       gradientStrokeViolet.addColorStop(1, 'rgba(154, 85, 255, 1)');
 
       var myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-              labels: [1, 2, 3, 4, 5, 6, 7, 8],
-              datasets: [
-                {
-                  label: "North Zone",
-                  borderColor: gradientStrokeViolet,
-                  backgroundColor: gradientStrokeViolet,
-                  hoverBackgroundColor: gradientStrokeViolet,
-                  pointRadius: 0,
-                  fill: false,
-                  borderWidth: 1,
-                  fill: 'origin',
-                  data: [20, 40, 15, 35, 25, 50, 30, 20]
-                },
-                {
-                  label: "South Zone",
-                  borderColor: '#e9eaee',
-                  backgroundColor: '#e9eaee',
-                  hoverBackgroundColor: '#e9eaee',
-                  pointRadius: 0,
-                  fill: false,
-                  borderWidth: 1,
-                  fill: 'origin',
-                  data: [40, 30, 20, 10, 50, 15, 35, 20]
-                }
-            ]
+        type: 'bar',
+        data: {
+          labels: [1, 2, 3, 4, 5, 6, 7, 8],
+          datasets: [
+            {
+              label: "North Zone",
+              borderColor: gradientStrokeViolet,
+              backgroundColor: gradientStrokeViolet,
+              hoverBackgroundColor: gradientStrokeViolet,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [20, 40, 15, 35, 25, 50, 30, 20]
+            },
+            {
+              label: "South Zone",
+              borderColor: '#e9eaee',
+              backgroundColor: '#e9eaee',
+              hoverBackgroundColor: '#e9eaee',
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [40, 30, 20, 10, 50, 15, 35, 20]
+            }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
           },
-          options: {
-              legend: {
-                  display: false
+          scales: {
+            yAxes: [{
+              ticks: {
+                display: false,
+                min: 0,
+                stepSize: 10
               },
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          display: false,
-                          min: 0,
-                          stepSize: 10
-                      },
-                      gridLines: {
-                        drawBorder: false,
-                        display: false
-                      }
-                  }],
-                  xAxes: [{
-                      gridLines: {
-                        display:false,
-                        drawBorder: false,
-                        color: 'rgba(0,0,0,1)',
-                        zeroLineColor: '#eeeeee'
-                      },
-                      ticks: {
-                          padding: 20,
-                          fontColor: "#9c9fa6",
-                          autoSkip: true,
-                      },
-                      barPercentage: 0.7
-                  }]
-                }
-              },
-              elements: {
-                point: {
-                  radius: 0
-                }
+              gridLines: {
+                drawBorder: false,
+                display: false
               }
-            })
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false,
+                color: 'rgba(0,0,0,1)',
+                zeroLineColor: '#eeeeee'
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "#9c9fa6",
+                autoSkip: true,
+              },
+              barPercentage: 0.7
+            }]
+          }
+        },
+        elements: {
+          point: {
+            radius: 0
+          }
+        }
+      })
     }
     if ($("#events-chart").length) {
       var ctx = document.getElementById('events-chart').getContext("2d");
@@ -129,72 +129,72 @@
       gradientStrokeBlue.addColorStop(1, 'rgba(177, 148, 250, 1)');
 
       var myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-              labels: [1, 2, 3, 4, 5, 6, 7, 8],
-              datasets: [
-                {
-                  label: "Domestic",
-                  borderColor: gradientStrokeBlue,
-                  backgroundColor: gradientStrokeBlue,
-                  hoverBackgroundColor: gradientStrokeBlue,
-                  pointRadius: 0,
-                  fill: false,
-                  borderWidth: 1,
-                  fill: 'origin',
-                  data: [20, 40, 15, 35, 25, 50, 30, 20]
-                },
-                {
-                  label: "International",
-                  borderColor: '#e9eaee',
-                  backgroundColor: '#e9eaee',
-                  hoverBackgroundColor: '#e9eaee',
-                  pointRadius: 0,
-                  fill: false,
-                  borderWidth: 1,
-                  fill: 'origin',
-                  data: [40, 30, 20, 10, 50, 15, 35, 20]
-                }
-            ]
+        type: 'bar',
+        data: {
+          labels: [1, 2, 3, 4, 5, 6, 7, 8],
+          datasets: [
+            {
+              label: "Domestic",
+              borderColor: gradientStrokeBlue,
+              backgroundColor: gradientStrokeBlue,
+              hoverBackgroundColor: gradientStrokeBlue,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [20, 40, 15, 35, 25, 50, 30, 20]
+            },
+            {
+              label: "International",
+              borderColor: '#e9eaee',
+              backgroundColor: '#e9eaee',
+              hoverBackgroundColor: '#e9eaee',
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [40, 30, 20, 10, 50, 15, 35, 20]
+            }
+          ]
+        },
+        options: {
+          legend: {
+            display: false
           },
-          options: {
-              legend: {
-                  display: false
+          scales: {
+            yAxes: [{
+              ticks: {
+                display: false,
+                min: 0,
+                stepSize: 10
               },
-              scales: {
-                  yAxes: [{
-                      ticks: {
-                          display: false,
-                          min: 0,
-                          stepSize: 10
-                      },
-                      gridLines: {
-                        drawBorder: false,
-                        display: false
-                      }
-                  }],
-                  xAxes: [{
-                      gridLines: {
-                        display:false,
-                        drawBorder: false,
-                        color: 'rgba(0,0,0,1)',
-                        zeroLineColor: '#eeeeee'
-                      },
-                      ticks: {
-                          padding: 20,
-                          fontColor: "#9c9fa6",
-                          autoSkip: true,
-                      },
-                      barPercentage: 0.7
-                  }]
-                }
-              },
-              elements: {
-                point: {
-                  radius: 0
-                }
+              gridLines: {
+                drawBorder: false,
+                display: false
               }
-            })
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false,
+                color: 'rgba(0,0,0,1)',
+                zeroLineColor: '#eeeeee'
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "#9c9fa6",
+                autoSkip: true,
+              },
+              barPercentage: 0.7
+            }]
+          }
+        },
+        elements: {
+          point: {
+            radius: 0
+          }
+        }
+      })
     }
     if ($("#visit-sale-chart").length) {
       Chart.defaults.global.legend.labels.usePointStyle = true;
@@ -204,7 +204,7 @@
       gradientStrokeViolet.addColorStop(0, 'rgba(218, 140, 255, 1)');
       gradientStrokeViolet.addColorStop(1, 'rgba(154, 85, 255, 1)');
       var gradientLegendViolet = 'linear-gradient(to right, rgba(218, 140, 255, 1), rgba(154, 85, 255, 1))';
-      
+
       var gradientStrokeBlue = ctx.createLinearGradient(0, 0, 0, 360);
       gradientStrokeBlue.addColorStop(0, 'rgba(54, 215, 232, 1)');
       gradientStrokeBlue.addColorStop(1, 'rgba(177, 148, 250, 1)');
@@ -218,100 +218,100 @@
       var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
-            datasets: [
-              {
-                label: "CHN",
-                borderColor: gradientStrokeViolet,
-                backgroundColor: gradientStrokeViolet,
-                hoverBackgroundColor: gradientStrokeViolet,
-                legendColor: gradientLegendViolet,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [20, 40, 15, 35, 25, 50, 30, 20]
-              },
-              {
-                label: "USA",
-                borderColor: gradientStrokeRed,
-                backgroundColor: gradientStrokeRed,
-                hoverBackgroundColor: gradientStrokeRed,
-                legendColor: gradientLegendRed,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [40, 30, 20, 10, 50, 15, 35, 40]
-              },
-              {
-                label: "UK",
-                borderColor: gradientStrokeBlue,
-                backgroundColor: gradientStrokeBlue,
-                hoverBackgroundColor: gradientStrokeBlue,
-                legendColor: gradientLegendBlue,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [70, 10, 30, 40, 25, 50, 15, 30]
-              }
+          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
+          datasets: [
+            {
+              label: "CHN",
+              borderColor: gradientStrokeViolet,
+              backgroundColor: gradientStrokeViolet,
+              hoverBackgroundColor: gradientStrokeViolet,
+              legendColor: gradientLegendViolet,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [20, 40, 15, 35, 25, 50, 30, 20]
+            },
+            {
+              label: "USA",
+              borderColor: gradientStrokeRed,
+              backgroundColor: gradientStrokeRed,
+              hoverBackgroundColor: gradientStrokeRed,
+              legendColor: gradientLegendRed,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [40, 30, 20, 10, 50, 15, 35, 40]
+            },
+            {
+              label: "UK",
+              borderColor: gradientStrokeBlue,
+              backgroundColor: gradientStrokeBlue,
+              hoverBackgroundColor: gradientStrokeBlue,
+              legendColor: gradientLegendBlue,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [70, 10, 30, 40, 25, 50, 15, 30]
+            }
           ]
         },
         options: {
           responsive: true,
           legend: false,
-          legendCallback: function(chart) {
-            var text = []; 
-            text.push('<ul>'); 
-            for (var i = 0; i < chart.data.datasets.length; i++) { 
-                text.push('<li><span class="legend-dots" style="background:' + 
-                           chart.data.datasets[i].legendColor + 
-                           '"></span>'); 
-                if (chart.data.datasets[i].label) { 
-                    text.push(chart.data.datasets[i].label); 
-                } 
-                text.push('</li>'); 
-            } 
-            text.push('</ul>'); 
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<ul>');
+            for (var i = 0; i < chart.data.datasets.length; i++) {
+              text.push('<li><span class="legend-dots" style="background:' +
+                chart.data.datasets[i].legendColor +
+                '"></span>');
+              if (chart.data.datasets[i].label) {
+                text.push(chart.data.datasets[i].label);
+              }
+              text.push('</li>');
+            }
+            text.push('</ul>');
             return text.join('');
           },
           scales: {
-              yAxes: [{
-                  ticks: {
-                      display: false,
-                      min: 0,
-                      stepSize: 20,
-                      max: 80
-                  },
-                  gridLines: {
-                    drawBorder: false,
-                    color: 'rgba(235,237,242,1)',
-                    zeroLineColor: 'rgba(235,237,242,1)'
-                  }
-              }],
-              xAxes: [{
-                  gridLines: {
-                    display:false,
-                    drawBorder: false,
-                    color: 'rgba(0,0,0,1)',
-                    zeroLineColor: 'rgba(235,237,242,1)'
-                  },
-                  ticks: {
-                      padding: 20,
-                      fontColor: "#9c9fa6",
-                      autoSkip: true,
-                  },
-                  categoryPercentage: 0.5,
-                  barPercentage: 0.5
-              }]
-            }
-          },
-          elements: {
-            point: {
-              radius: 0
-            }
+            yAxes: [{
+              ticks: {
+                display: false,
+                min: 0,
+                stepSize: 20,
+                max: 80
+              },
+              gridLines: {
+                drawBorder: false,
+                color: 'rgba(235,237,242,1)',
+                zeroLineColor: 'rgba(235,237,242,1)'
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false,
+                color: 'rgba(0,0,0,1)',
+                zeroLineColor: 'rgba(235,237,242,1)'
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "#9c9fa6",
+                autoSkip: true,
+              },
+              categoryPercentage: 0.5,
+              barPercentage: 0.5
+            }]
           }
+        },
+        elements: {
+          point: {
+            radius: 0
+          }
+        }
       })
       $("#visit-sale-chart-legend").html(myChart.generateLegend());
     }
@@ -323,7 +323,7 @@
       gradientStrokeViolet.addColorStop(0, 'rgba(218, 140, 255, 1)');
       gradientStrokeViolet.addColorStop(1, 'rgba(154, 85, 255, 1)');
       var gradientLegendViolet = 'linear-gradient(to right, rgba(218, 140, 255, 1), rgba(154, 85, 255, 1))';
-      
+
       var gradientStrokeBlue = ctx.createLinearGradient(0, 0, 0, 360);
       gradientStrokeBlue.addColorStop(0, 'rgba(54, 215, 232, 1)');
       gradientStrokeBlue.addColorStop(1, 'rgba(177, 148, 250, 1)');
@@ -337,100 +337,100 @@
       var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
-            datasets: [
-              {
-                label: "CHN",
-                borderColor: gradientStrokeViolet,
-                backgroundColor: gradientStrokeViolet,
-                hoverBackgroundColor: gradientStrokeViolet,
-                legendColor: gradientLegendViolet,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [20, 40, 15, 35, 25, 50, 30, 20]
-              },
-              {
-                label: "USA",
-                borderColor: gradientStrokeRed,
-                backgroundColor: gradientStrokeRed,
-                hoverBackgroundColor: gradientStrokeRed,
-                legendColor: gradientLegendRed,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [40, 30, 20, 10, 50, 15, 35, 40]
-              },
-              {
-                label: "UK",
-                borderColor: gradientStrokeBlue,
-                backgroundColor: gradientStrokeBlue,
-                hoverBackgroundColor: gradientStrokeBlue,
-                legendColor: gradientLegendBlue,
-                pointRadius: 0,
-                fill: false,
-                borderWidth: 1,
-                fill: 'origin',
-                data: [70, 10, 30, 40, 25, 50, 15, 30]
-              }
+          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
+          datasets: [
+            {
+              label: "CHN",
+              borderColor: gradientStrokeViolet,
+              backgroundColor: gradientStrokeViolet,
+              hoverBackgroundColor: gradientStrokeViolet,
+              legendColor: gradientLegendViolet,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [20, 40, 15, 35, 25, 50, 30, 20]
+            },
+            {
+              label: "USA",
+              borderColor: gradientStrokeRed,
+              backgroundColor: gradientStrokeRed,
+              hoverBackgroundColor: gradientStrokeRed,
+              legendColor: gradientLegendRed,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [40, 30, 20, 10, 50, 15, 35, 40]
+            },
+            {
+              label: "UK",
+              borderColor: gradientStrokeBlue,
+              backgroundColor: gradientStrokeBlue,
+              hoverBackgroundColor: gradientStrokeBlue,
+              legendColor: gradientLegendBlue,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [70, 10, 30, 40, 25, 50, 15, 30]
+            }
           ]
         },
         options: {
           responsive: true,
           legend: false,
-          legendCallback: function(chart) {
-            var text = []; 
-            text.push('<ul>'); 
-            for (var i = 0; i < chart.data.datasets.length; i++) { 
-                text.push('<li><span class="legend-dots" style="background:' + 
-                           chart.data.datasets[i].legendColor + 
-                           '"></span>'); 
-                if (chart.data.datasets[i].label) { 
-                    text.push(chart.data.datasets[i].label); 
-                } 
-                text.push('</li>'); 
-            } 
-            text.push('</ul>'); 
+          legendCallback: function (chart) {
+            var text = [];
+            text.push('<ul>');
+            for (var i = 0; i < chart.data.datasets.length; i++) {
+              text.push('<li><span class="legend-dots" style="background:' +
+                chart.data.datasets[i].legendColor +
+                '"></span>');
+              if (chart.data.datasets[i].label) {
+                text.push(chart.data.datasets[i].label);
+              }
+              text.push('</li>');
+            }
+            text.push('</ul>');
             return text.join('');
           },
           scales: {
-              yAxes: [{
-                  ticks: {
-                      display: false,
-                      min: 0,
-                      stepSize: 20,
-                      max: 80
-                  },
-                  gridLines: {
-                    drawBorder: false,
-                    color: '#322f2f',
-                    zeroLineColor: '#322f2f'
-                  }
-              }],
-              xAxes: [{
-                  gridLines: {
-                    display:false,
-                    drawBorder: false,
-                    color: 'rgba(0,0,0,1)',
-                    zeroLineColor: 'rgba(235,237,242,1)'
-                  },
-                  ticks: {
-                      padding: 20,
-                      fontColor: "#9c9fa6",
-                      autoSkip: true,
-                  },
-                  categoryPercentage: 0.5,
-                  barPercentage: 0.5
-              }]
-            }
-          },
-          elements: {
-            point: {
-              radius: 0
-            }
+            yAxes: [{
+              ticks: {
+                display: false,
+                min: 0,
+                stepSize: 20,
+                max: 80
+              },
+              gridLines: {
+                drawBorder: false,
+                color: '#322f2f',
+                zeroLineColor: '#322f2f'
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false,
+                color: 'rgba(0,0,0,1)',
+                zeroLineColor: 'rgba(235,237,242,1)'
+              },
+              ticks: {
+                padding: 20,
+                fontColor: "#9c9fa6",
+                autoSkip: true,
+              },
+              categoryPercentage: 0.5,
+              barPercentage: 0.5
+            }]
           }
+        },
+        elements: {
+          point: {
+            radius: 0
+          }
+        }
       })
       $("#visit-sale-chart-legend-dark").html(myChart.generateLegend());
     }
@@ -448,7 +448,7 @@
       var gradientStrokeGreen = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStrokeGreen.addColorStop(0, 'rgba(6, 185, 157, 1)');
       gradientStrokeGreen.addColorStop(1, 'rgba(132, 217, 210, 1)');
-      var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';      
+      var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';
 
       var trafficChartData = {
         datasets: [{
@@ -474,7 +474,7 @@
             gradientLegendRed
           ]
         }],
-    
+
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
           'Search Engines',
@@ -489,20 +489,20 @@
           animateRotate: true
         },
         legend: false,
-        legendCallback: function(chart) {
-          var text = []; 
-          text.push('<ul>'); 
-          for (var i = 0; i < trafficChartData.datasets[0].data.length; i++) { 
-              text.push('<li><span class="legend-dots" style="background:' + 
-              trafficChartData.datasets[0].legendColor[i] + 
-                          '"></span>'); 
-              if (trafficChartData.labels[i]) { 
-                  text.push(trafficChartData.labels[i]); 
-              }
-              text.push('<span class="float-right">'+trafficChartData.datasets[0].data[i]+"%"+'</span>')
-              text.push('</li>'); 
-          } 
-          text.push('</ul>'); 
+        legendCallback: function (chart) {
+          var text = [];
+          text.push('<ul>');
+          for (var i = 0; i < trafficChartData.datasets[0].data.length; i++) {
+            text.push('<li><span class="legend-dots" style="background:' +
+              trafficChartData.datasets[0].legendColor[i] +
+              '"></span>');
+            if (trafficChartData.labels[i]) {
+              text.push(trafficChartData.labels[i]);
+            }
+            text.push('<span class="float-right">' + trafficChartData.datasets[0].data[i] + "%" + '</span>')
+            text.push('</li>');
+          }
+          text.push('</ul>');
           return text.join('');
         }
       };
@@ -512,7 +512,7 @@
         data: trafficChartData,
         options: trafficChartOptions
       });
-      $("#traffic-chart-legend").html(trafficChart.generateLegend());      
+      $("#traffic-chart-legend").html(trafficChart.generateLegend());
     }
     if ($("#inline-datepicker").length) {
       $('#inline-datepicker').datepicker({
